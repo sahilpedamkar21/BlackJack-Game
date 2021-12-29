@@ -12,7 +12,7 @@ let player = {
 let CardsEl = document.getElementById("cards-el")
 let SumEl = document.getElementById("sum-el")
 let message = document.getElementById("message-el")
-
+let playerEl = document.getElementById("player-el")
 function drawrandom(){
 	let draw = Math.floor(Math.random()*13)+1
 	if(draw === 1){
@@ -27,7 +27,7 @@ function drawrandom(){
 }
 
 function startGame(){
-
+	playerEl.textContent = player.name + " : $ " + player.chips
 	let firstCard = drawrandom()
 	let secondCard = drawrandom()
 	cards.push(firstCard)
